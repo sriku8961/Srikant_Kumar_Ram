@@ -1,0 +1,996 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#004aad">
+  <meta name="description" content="Portfolio of Srikant Kumar Ram — Assistant City Manager specializing in business development, operations, supply chain, client acquisition and commercial management.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Srikant Kumar Ram | Business Development & Operations">
+  <meta property="og:description" content="Assistant City Manager with measurable impact across business growth, client acquisition, operations and supply chain.">
+  <meta property="og:type" content="website">
+  <title>Srikant Kumar Ram | Business Development & Operations</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand:#004aad;
+      --brand-dark:#003f93;
+      --brand-soft:#eaf2ff;
+      --ink:#0d1b2a;
+      --muted:#5f6b7a;
+      --line:#dce4ef;
+      --bg:#f5f8fc;
+      --sidebar-width:280px;
+      --radius:1.4rem;
+    }
+
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family:"Aileron","Inter","Segoe UI",Arial,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 82% 4%, rgba(0,74,173,.10), transparent 27rem),
+        linear-gradient(180deg,#fff 0%,var(--bg) 100%);
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    h1,h2,h3,h4,h5,h6{
+      font-family:"Now","Segoe UI",Arial,sans-serif;
+      color:var(--ink);
+      line-height:1.15;
+    }
+
+    p{color:var(--muted)}
+
+    .text-brand{color:var(--brand)!important}
+    .bg-brand{background-color:var(--brand)!important}
+    .bg-brand-soft{background-color:var(--brand-soft)!important}
+    .border-soft{border-color:var(--line)!important}
+
+    .section-pad{padding:5.5rem 0}
+    .section-pad-sm{padding:4rem 0}
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:.6rem;
+      color:var(--brand);
+      font-size:.76rem;
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      margin-bottom:.75rem;
+    }
+
+    .eyebrow::before{
+      content:"";
+      width:1.4rem;
+      height:2px;
+      background:var(--brand);
+      border-radius:999px;
+    }
+#contact .eyebrow::before{
+  background:#ffffff !important;
+}
+    .display-title{
+      font-size:clamp(2rem,4.2vw,3.6rem);
+      font-weight:500;
+      letter-spacing:-.055em;
+      max-width:900px;
+    }
+
+    .section-title{
+      font-size:clamp(2rem,4vw,3.15rem);
+      font-weight:500;
+      letter-spacing:-.035em;
+    }
+
+    .card-soft{
+      background:rgba(255,255,255,.92);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:0 12px 30px rgba(13,27,42,.05);
+    }
+
+    .btn-brand{
+      background:var(--brand);
+      border-color:var(--brand);
+      color:#fff;
+      font-weight:700;
+      border-radius:.9rem;
+      padding:.8rem 1.15rem;
+    }
+
+    .btn-brand:hover,
+    .btn-brand:focus{
+      background:var(--brand-dark);
+      border-color:var(--brand-dark);
+      color:#fff;
+    }
+
+    .btn-soft{
+      background:#fff;
+      border:1px solid var(--line);
+      color:var(--ink);
+      font-weight:700;
+      border-radius:.9rem;
+      padding:.8rem 1.15rem;
+    }
+
+    .btn-soft:hover{
+      color:var(--brand);
+      border-color:#b9cbe2;
+      background:#fff;
+    }
+
+    /* Desktop Sidebar */
+    .desktop-sidebar{
+      position:fixed;
+      inset:0 auto 0 0;
+      z-index:1030;
+      width:var(--sidebar-width);
+      background:linear-gradient(180deg,#fff 0%,#f8fbff 100%);
+      border-right:1px solid var(--line);
+      box-shadow:8px 0 28px rgba(13,27,42,.05);
+      overflow-y:auto;
+    }
+
+    .desktop-sidebar .sidebar-inner{
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      padding:1.5rem 1.15rem;
+    }
+
+    .brand-mark{
+      width:44px;
+      height:44px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:.85rem;
+      background:var(--brand);
+      color:#fff;
+      font-weight:700;
+      box-shadow:0 8px 20px rgba(0,74,173,.2);
+      flex:0 0 auto;
+    }
+
+    .sidebar-nav .nav-link{
+      display:flex;
+      align-items:center;
+      gap:.8rem;
+      color:#44536a;
+      border-radius:.85rem;
+      padding:.75rem .85rem;
+      font-size:.93rem;
+      font-weight:600;
+      transition:.2s ease;
+    }
+
+    .sidebar-nav .nav-link i{
+      width:1.15rem;
+      text-align:center;
+      color:#7890ad;
+    }
+
+    .sidebar-nav .nav-link:hover,
+    .sidebar-nav .nav-link.active{
+      color:var(--brand);
+      background:var(--brand-soft);
+    }
+
+    .sidebar-nav .nav-link:hover i,
+    .sidebar-nav .nav-link.active i{
+      color:var(--brand);
+    }
+
+    .sidebar-contact{
+      border:1px solid #d9e6f5;
+      background:#fff;
+      border-radius:1rem;
+      padding:1rem;
+    }
+
+    .page-shell{
+      min-height:100vh;
+    }
+
+    @media (min-width: 992px){
+      .page-shell{
+        margin-left:var(--sidebar-width);
+      }
+    }
+
+    /* Mobile top bar */
+    .mobile-topbar{
+      background:rgba(255,255,255,.94);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid var(--line);
+      z-index:1020;
+    }
+
+    .offcanvas{
+      width:min(86vw,320px)!important;
+    }
+
+    .offcanvas .sidebar-nav .nav-link{
+      font-size:1rem;
+    }
+
+    /* Hero */
+    .hero{
+      padding:clamp(2rem,4vw,2rem) 0 4.5rem;
+      overflow:hidden;
+    }
+
+    .hero-copy{
+      max-width:760px;
+    }
+
+    .hero-subtitle{
+      font-size:clamp(1rem,2vw,1.3rem);
+      max-width:760px;
+      color:#47566b;
+    }
+
+    .hero-panel{
+      position:relative;
+      background:#0d1b2a;
+      color:#fff;
+      border-radius:2rem;
+      padding:clamp(1.5rem,3vw,2rem);
+      box-shadow:0 30px 80px rgba(13,27,42,.22);
+      overflow:hidden;
+    }
+
+    .hero-panel::before{
+      content:"";
+      position:absolute;
+      width:340px;
+      height:340px;
+      border-radius:50%;
+      right:-140px;
+      top:-140px;
+      background:radial-gradient(circle,rgba(20,104,215,.85),rgba(20,104,215,0));
+    }
+
+    .hero-panel > *{position:relative;z-index:1}
+
+    .metric-card{
+      min-height:118px;
+      padding:1rem;
+      border-radius:1rem;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+    }
+
+    .metric-card strong{
+      display:block;
+      color:#fff;
+      font-size:clamp(1.6rem,3vw,2rem);
+      font-weight:500;
+    }
+
+    .metric-card span{
+      color:#c6d3e2;
+      /* font-size:.86rem; */
+      font-size:.75rem;
+    }
+
+    .focus-card{
+      background:#fff;
+      border-radius:1rem;
+      padding:1rem;
+    }
+
+    .skill-chip{
+      display:inline-block;
+      background:#eef4fc;
+      color:#28415d;
+      border-radius:999px;
+      /* font-size:.78rem; */
+      font-size:.65rem;
+      font-weight:650;
+      padding:.45rem .7rem;
+      margin:.2rem;
+    }
+
+    /* Experience */
+    .timeline{
+      position:relative;
+    }
+
+    .timeline::before{
+      content:"";
+      position:absolute;
+      left:10px;
+      top:12px;
+      bottom:10px;
+      width:1px;
+      background:#cbd7e7;
+    }
+
+    .job{
+      position:relative;
+      padding-left:2.6rem;
+    }
+
+    .job::before{
+      content:"";
+      position:absolute;
+      left:2px;
+      top:.4rem;
+      width:17px;
+      height:17px;
+      border-radius:50%;
+      background:#fff;
+      border:4px solid var(--brand);
+      box-shadow:0 0 0 5px #edf4ff;
+    }
+
+    .job + .job{
+      margin-top:2.5rem;
+    }
+
+    .job ul{
+      padding-left:1.15rem;
+      margin-bottom:0;
+      color:#526174;
+    }
+
+    .job li + li{
+      margin-top:.65rem;
+    }
+
+    /* Capability */
+    .cap-card{
+      height:100%;
+      padding:1.4rem;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:1.25rem;
+      transition:.2s ease;
+    }
+
+    .cap-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 18px 45px rgba(13,27,42,.08);
+      border-color:#c4d6ed;
+    }
+
+    .icon-box{
+      width:46px;
+      height:46px;
+      display:grid;
+      place-items:center;
+      border-radius:.85rem;
+      background:var(--brand-soft);
+      color:var(--brand);
+      margin-bottom:1rem;
+      font-size:1.1rem;
+    }
+
+    /* Contact */
+    .contact-shell{
+      position:relative;
+      overflow:hidden;
+      background:linear-gradient(135deg,var(--brand),#0a2d5f);
+      border-radius:2rem;
+      padding:clamp(2rem,5vw,3.5rem);
+    }
+
+    .contact-shell::after{
+      content:"";
+      position:absolute;
+      width:320px;
+      height:320px;
+      border-radius:50%;
+      right:-120px;
+      bottom:-160px;
+      border:1px solid rgba(255,255,255,.18);
+    }
+
+    .contact-shell > *{position:relative;z-index:1}
+    .contact-shell p{color:#d9e7fb}
+
+    /* Scroll reveal */
+    .reveal{
+      opacity:0;
+      transform:translateY(14px);
+      transition:opacity .5s ease,transform .5s ease;
+    }
+
+    .reveal.is-visible{
+      opacity:1;
+      transform:none;
+    }
+
+    @media (max-width: 991.98px){
+      .section-pad{padding:4.5rem 0}
+      .section-pad-sm{padding:3.5rem 0}
+      .hero{padding-top:4.5rem}
+      .hero-panel{margin-top:.5rem}
+    }
+
+    @media (max-width: 767.98px){
+      .display-title{letter-spacing:-.04em}
+      .section-title{letter-spacing:-.025em}
+      .hero{padding-top:3.5rem;padding-bottom:3.5rem}
+      .section-pad{padding:4rem 0}
+      .section-pad-sm{padding:3rem 0}
+      .job{padding-left:2.2rem}
+      .contact-shell{border-radius:1.4rem}
+    }
+
+    @media (max-width: 575.98px){
+      .btn-mobile-full{width:100%}
+      .hero-meta .col-12 + .col-12{margin-top:.4rem}
+      .metric-card{min-height:105px}
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{
+        animation:none!important;
+        transition:none!important;
+      }
+      .reveal{
+        opacity:1;
+        transform:none;
+      }
+    }
+
+    @media print{
+      .desktop-sidebar,
+      .mobile-topbar,
+      .hero-actions,
+      .contact-actions{
+        display:none!important;
+      }
+      .page-shell{
+        margin-left:0!important;
+      }
+      body{
+        background:#fff;
+      }
+      .section-pad,
+      .section-pad-sm,
+      .hero{
+        padding:1.5rem 0;
+      }
+      .reveal{
+        opacity:1!important;
+        transform:none!important;
+      }
+    }
+  .brand-mark-img{
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: .85rem;
+  display: inline-block;
+  box-shadow: 0 8px 20px rgba(0,74,173,.2);
+  flex: 0 0 auto;
+}
+.bg-custom{
+  background: rgb(0 74 173);
+  color: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 30px rgba(13, 27, 42, .05);
+}
+.text-custom{
+  --bs-text-opacity: 1;
+    color: rgb(208 208 208) !important;
+}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Srikant Kumar Ram",
+    "jobTitle":"Assistant City Manager",
+    "address":{"@type":"PostalAddress","addressLocality":"Kolkata","addressCountry":"IN"},
+    "email":"mailto:ramsrikantkumar@gmail.com",
+    "telephone":"+91-8420500841",
+    "alumniOf":{"@type":"CollegeOrUniversity","name":"National Institute of Technology, Durgapur"},
+    "knowsAbout":["Business Development","Client Acquisition","Operations","Supply Chain","Commercial Negotiation","Key Account Management","Team Leadership"]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Desktop Sidebar -->
+  <aside class="desktop-sidebar d-none d-lg-block" aria-label="Portfolio navigation">
+    <div class="sidebar-inner">
+      <a class="d-flex align-items-center gap-3 text-decoration-none" href="#home">
+        <img src="photo.png" alt="Srikant Kumar Ram" class="brand-mark-img">
+        <span>
+          <strong class="d-block text-dark small">Srikant Kumar Ram</strong>
+          <small class="text-secondary">Assistant City Manager</small>
+        </span>
+      </a>
+
+      <div class="text-uppercase text-secondary fw-bold small mt-3 mb-2 px-2" style="letter-spacing:.12em">Navigation</div>
+
+      <nav class="nav flex-column sidebar-nav" id="desktopNav">
+        <a class="nav-link" href="#home"><i class="bi bi-house-door"></i>Home</a>
+        <a class="nav-link" href="#about"><i class="bi bi-person"></i>About</a>
+        <a class="nav-link" href="#experience"><i class="bi bi-briefcase"></i>Experience</a>
+        <a class="nav-link" href="#capabilities"><i class="bi bi-bar-chart"></i>Capabilities</a>
+        <a class="nav-link" href="#credentials"><i class="bi bi-mortarboard"></i>Credentials</a>
+        <a class="nav-link" href="#contact"><i class="bi bi-envelope"></i>Contact</a>
+      </nav>
+
+      <div class="mt-auto pt-2">
+        <div class="sidebar-contact">
+          <small class="text-uppercase text-secondary fw-bold d-block mb-1" style="letter-spacing:.08em">Open to connect</small>
+          <strong class="d-block mb-3">Business Growth & Operations</strong>
+          <a class="btn btn-brand w-100" href="https://mail.google.com/mail/?view=cm&fs=1&to=ramsrikantkumar@gmail.com" target="_blank" rel="noopener noreferrer">Email Me</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Mobile / Tablet Topbar -->
+  <header class="mobile-topbar navbar sticky-top d-lg-none">
+    <div class="container-fluid px-3 py-2">
+      <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="#home">
+        <img src="photo.png" alt="Srikant Kumar Ram" class="brand-mark-img">
+        <span class="fw-semibold fs-6">Srikant Kumar Ram</span>
+      </a>
+
+      <button class="btn btn-outline-secondary border-0 fs-4" type="button"
+              data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+              aria-controls="mobileMenu" aria-label="Open navigation">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Bootstrap Offcanvas -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header border-bottom">
+      <div class="d-flex align-items-center gap-2">
+        <span class="brand-mark" style="width:40px;height:40px">SR</span>
+        <div>
+          <h5 class="offcanvas-title mb-0 fs-6" id="mobileMenuLabel">Srikant Kumar Ram</h5>
+          <small class="text-secondary">Business Development • Operations</small>
+        </div>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+    <div class="offcanvas-body d-flex flex-column">
+      <nav class="nav flex-column sidebar-nav" id="mobileNav">
+        <a class="nav-link" href="#home" data-bs-dismiss="offcanvas"><i class="bi bi-house-door"></i>Home</a>
+        <a class="nav-link" href="#about" data-bs-dismiss="offcanvas"><i class="bi bi-person"></i>About</a>
+        <a class="nav-link" href="#experience" data-bs-dismiss="offcanvas"><i class="bi bi-briefcase"></i>Experience</a>
+        <a class="nav-link" href="#capabilities" data-bs-dismiss="offcanvas"><i class="bi bi-bar-chart"></i>Capabilities</a>
+        <a class="nav-link" href="#credentials" data-bs-dismiss="offcanvas"><i class="bi bi-mortarboard"></i>Credentials</a>
+        <a class="nav-link" href="#contact" data-bs-dismiss="offcanvas"><i class="bi bi-envelope"></i>Contact</a>
+      </nav>
+
+      <div class="mt-auto pt-4">
+        <div class="sidebar-contact">
+          <small class="text-uppercase text-secondary fw-bold d-block mb-1">Open to connect</small>
+          <strong class="d-block mb-3">Business Growth & Operations</strong>
+          <a class="btn btn-brand w-100" href="https://mail.google.com/mail/?view=cm&fs=1&to=ramsrikantkumar@gmail.com" target="_blank" rel="noopener noreferrer">Email Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-shell">
+    <main>
+
+      <!-- HERO -->
+      <section class="hero" id="home">
+        <div class="container-fluid px-3 px-sm-4 px-xl-5">
+          <div class="row g-4 g-xl-5 align-items-center">
+
+            <div class="col-12 col-xl-7">
+              <div class="hero-copy reveal">
+                <span class="eyebrow">Business Growth • Operations • Supply Chain</span>
+
+                <h1 class="display-title mb-4">
+                  Turning operational complexity into
+                  <span class="text-brand">measurable business growth.</span>
+                </h1>
+
+                <p class="hero-subtitle mb-4">
+                  Assistant City Manager with 10+ years of experience across client acquisition,
+                  modern trade and e-commerce, commercial negotiation, city operations
+                  and supply chain coordination.
+                </p>
+
+                <div class="hero-actions d-flex flex-column flex-sm-row gap-2 gap-sm-3 mb-4">
+                  <a class="btn btn-brand btn-mobile-full" href="https://mail.google.com/mail/?view=cm&fs=1&to=ramsrikantkumar@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-envelope me-2"></i>Email Me
+                  </a>
+                  <a class="btn btn-soft btn-mobile-full" href="tel:+918420500841">
+                    <i class="bi bi-telephone me-2"></i>Call +91 84205 00841
+                  </a>
+                </div>
+
+                <div class="hero-meta row g-2 text-secondary small">
+                  <div class="col-12 col-md-auto">
+                    <i class="bi bi-geo-alt text-brand me-1"></i>Kolkata, India
+                  </div>
+                  <div class="col-12 col-md-auto">
+                    <i class="bi bi-briefcase text-brand me-1"></i>
+                    Currently: Assistant City Manager, COGOS Technologies
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-xl-5">
+              <aside class="hero-panel reveal">
+                <div class="small text-uppercase fw-bold mb-2" style="letter-spacing:.12em;color:#9fc1ef">Impact Snapshot</div>
+                <!-- <h2 class="h3 text-white fw-normal mb-4">Commercial ownership backed by execution.</h2> -->
+
+                <div class="row g-3">
+                  <div class="col-6">
+                    <div class="metric-card">
+                      <strong>₹80L</strong>
+                      <span>Business / revenue handled</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="metric-card">
+                      <strong>12</strong>
+                      <span>Clients acquired & onboarded</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="metric-card">
+                      <strong>15</strong>
+                      <span>Team members led</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="metric-card">
+                      <strong>12%</strong>
+                      <span>Business growth contributed</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="focus-card mt-3">
+                  <div class="small fw-bold text-uppercase text-brand mb-2" style="letter-spacing:.1em">Core Focus</div>
+                  <div>
+                    <span class="skill-chip">Client Acquisition</span>
+                    <span class="skill-chip">Commercial Negotiation</span>
+                    <span class="skill-chip">City Operations</span>
+                    <span class="skill-chip">Supply Chain</span>
+                    <span class="skill-chip">Key Accounts</span>
+                    <span class="skill-chip">Team Leadership</span>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section-pad-sm" id="about">
+        <div class="container-fluid px-3 px-sm-4 px-xl-5">
+          <div class="row g-4 align-items-end mb-4 mb-lg-5 reveal">
+            <div class="col-12 col-lg-7">
+              <span class="eyebrow">Profile</span>
+              <h2 class="section-title mb-0">Business-first, execution-focused.</h2>
+            </div>
+            <div class="col-12 col-lg-5">
+              <p class="mb-0">
+                Experience spanning revenue growth, client relationships, pricing,
+                service delivery, operations and cross-functional coordination.
+              </p>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-lg-6">
+              <article class="card-soft p-4 p-xl-5 h-100 reveal">
+                <p class="mb-0 fs-6">
+                  I work at the intersection of business development and operations—building
+                  client pipelines, converting opportunities, negotiating commercials and
+                  coordinating teams to deliver reliably after the sale. My current role at
+                  COGOS Technologies combines market growth with city-level operational
+                  execution and stakeholder management.
+                </p>
+              </article>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <article class="card-soft p-4 h-100 reveal">
+                <div class="row g-3">
+                  <div class="col-12 col-sm-6">
+                    <div class="bg-custom border rounded-4 p-3 h-100">
+                      <small class="text-uppercase text-custom fw-bold">Current Role</small>
+                      <strong class="d-block mt-1">Assistant City Manager</strong>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="bg-custom border rounded-4 p-3 h-100">
+                      <small class="text-uppercase text-custom fw-bold">Core Focus</small>
+                      <strong class="d-block mt-1">Operations & Supply Chain</strong>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="bg-custom border rounded-4 p-3 h-100">
+                      <small class="text-uppercase text-custom fw-bold">Education</small>
+                      <strong class="d-block mt-1">B.Tech, Mechanical</strong>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <div class="bg-custom border rounded-4 p-3 h-100">
+                      <small class="text-uppercase text-custom fw-bold">Languages</small>
+                      <strong class="d-block mt-1">English • Hindi • Bengali</strong>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="section-pad" id="experience">
+        <div class="container-fluid px-3 px-sm-4 px-xl-5">
+          <div class="row g-4 align-items-end mb-4 mb-lg-5 reveal">
+            <div class="col-12 col-lg-7">
+              <span class="eyebrow">Career</span>
+              <h2 class="section-title mb-0">Professional experience.</h2>
+            </div>
+            <div class="col-12 col-lg-5">
+              <p class="mb-0">Roles centered on business growth, client management, operational execution and team coordination.</p>
+            </div>
+          </div>
+
+          <div class="timeline">
+            <article class="job reveal">
+              <div class="row g-3 g-lg-4">
+                <div class="col-12 col-md-4 col-xl-3">
+                  <div class="fw-bold fs-5">COGOS Technologies</div>
+                  <div class="text-secondary mt-1">Kolkata • Present</div>
+                </div>
+                <div class="col-12 col-md-8 col-xl-9">
+                  <h3 class="h4 text-brand fw-normal mb-3">Assistant City Manager</h3>
+                  <ul>
+                    <li>Drive business development and client acquisition while supporting city-level commercial and operational execution.</li>
+                    <li>Manage business operations and commercial activities representing approximately ₹80 lakh in revenue.</li>
+                    <li>Acquired and onboarded 12 clients through prospecting, relationship building, commercial discussions and conversion.</li>
+                    <li>Contributed to approximately 12% business growth through new client acquisition, account development and expansion initiatives.</li>
+                    <li>Lead and coordinate a 15-member team across performance, staff development and day-to-day operational execution.</li>
+                    <li>Prepare and negotiate proposals, rate cards and revised pricing while balancing client requirements with business margins.</li>
+                    <li>Coordinate with operations and supply chain teams across onboarding, service delivery, issue resolution and process improvement.</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="job reveal">
+              <div class="row g-3 g-lg-4">
+                <div class="col-12 col-md-4 col-xl-3">
+                  <div class="fw-bold fs-5">Porter</div>
+                  <div class="text-secondary mt-1">2021 – 2022</div>
+                </div>
+                <div class="col-12 col-md-8 col-xl-9">
+                  <h3 class="h4 text-brand fw-normal mb-3">Area Manager</h3>
+                  <ul>
+                    <li>Managed business and operational activities across the assigned area while supporting customer acquisition and market growth.</li>
+                    <li>Managed customer relationships and coordinated timely resolution of customer concerns.</li>
+                    <li>Partnered with operational teams to maintain service delivery and improve day-to-day execution.</li>
+                    <li>Monitored operational performance, team activities and stakeholder coordination to support area targets and business continuity.</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+
+            <article class="job reveal">
+              <div class="row g-3 g-lg-4">
+                <div class="col-12 col-md-4 col-xl-3">
+                  <div class="fw-bold fs-5">NPCIL</div>
+                  <div class="text-secondary mt-1">2017 – 2021</div>
+                </div>
+                <div class="col-12 col-md-8 col-xl-9">
+                  <h3 class="h4 text-brand fw-normal mb-3">Operations &amp; Maintenance Engineer</h3>
+                  <ul>
+                    <li>Managed operations and maintenance activities, ensuring reliable and efficient functioning of equipment and systems.</li>
+                    <li>Planned and coordinated preventive and corrective maintenance activities to minimize downtime.</li>
+                    <li>Monitored equipment performance, identified operational issues, and coordinated timely corrective actions.</li>
+                    <li>Coordinated with cross-functional teams to support safe, efficient, and uninterrupted operations.</li>
+                    <li>Maintained operational and maintenance records and supported compliance with established procedures and safety requirements.</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CAPABILITIES -->
+      <section class="section-pad" id="capabilities">
+        <div class="container-fluid px-3 px-sm-4 px-xl-5">
+          <div class="row g-4 align-items-end mb-4 mb-lg-5 reveal">
+            <div class="col-12 col-lg-7">
+              <span class="eyebrow">Capabilities</span>
+              <h2 class="section-title mb-0">Where I create value.</h2>
+            </div>
+            <!-- <div class="col-12 col-lg-5">
+            </div> -->
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-sm-6 col-xl-3">
+              <article class="cap-card reveal">
+                <div class="icon-box"><i class="bi bi-graph-up-arrow"></i></div>
+                <h3 class="h5 fw-normal">Business Growth</h3>
+                <p class="mb-0 small">Client acquisition, lead generation, market development, account development and client conversion.</p>
+              </article>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-3">
+              <article class="cap-card reveal">
+                <div class="icon-box"><i class="bi bi-currency-exchange"></i></div>
+                <h3 class="h5 fw-normal">Commercial & Accounts</h3>
+                <p class="mb-0 small">Commercial negotiation, rate negotiation, proposals, rate cards, key account management and client retention.</p>
+              </article>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-3">
+              <article class="cap-card reveal">
+                <div class="icon-box"><i class="bi bi-truck"></i></div>
+                <h3 class="h5 fw-normal">Operations & Supply Chain</h3>
+                <p class="mb-0 small">City/area operations, service delivery, resource planning, operational efficiency and process optimization.</p>
+              </article>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-3">
+              <article class="cap-card reveal">
+                <div class="icon-box"><i class="bi bi-people"></i></div>
+                <h3 class="h5 fw-normal">Leadership & Stakeholders</h3>
+                <p class="mb-0 small">Team leadership, staff development, performance management, stakeholder management and cross-functional coordination.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CREDENTIALS -->
+      <section class="section-pad-sm" id="credentials">
+        <div class="container-fluid px-3 px-sm-4 px-xl-5">
+          <div class="mb-4 mb-lg-5 reveal">
+            <span class="eyebrow">Credentials</span>
+            <h2 class="section-title mb-0">Education & recognition.</h2>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-lg-5">
+              <article class="card-soft p-4 h-100 reveal">
+                <h3 class="h5 text-brand fw-normal mb-3"><i class="bi bi-mortarboard me-2"></i>Education</h3>
+                <strong class="d-block">B.Tech – Mechanical Engineering</strong>
+                <p class="mb-0 mt-1 small fw-bold">National Institute of Technology, Durgapur (NIT Durgapur) • 2016</p>
+              </article>
+            </div>
+
+            <div class="col-12 col-lg-4">
+              <article class="card-soft p-4 h-100 reveal">
+                <h3 class="h5 text-brand fw-normal mb-3"><i class="bi bi-trophy me-2"></i>Achievement</h3>
+                <strong class="d-block">Winner – Junkyard Wars</strong>
+                <p class="mb-0 mt-1 small fw-bold">Aarohan '15 • National Institute of Technology, Durgapur</p>
+              </article>
+            </div>
+
+            <div class="col-12 col-lg-3">
+              <article class="card-soft p-4 h-100 reveal">
+                <h3 class="h5 text-brand fw-normal mb-3"><i class="bi bi-translate me-2"></i>Languages</h3>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge rounded-pill text-bg-light border px-3 py-2">English</span>
+                  <span class="badge rounded-pill text-bg-light border px-3 py-2">Hindi</span>
+                  <span class="badge rounded-pill text-bg-light border px-3 py-2">Bengali</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section-pad" id="contact">
+        <div class="container-fluid px-3 px-sm-4 px-xl-5">
+          <div class="contact-shell reveal">
+            <div class="row g-4 align-items-center">
+              <div class="col-12 col-xl-8">
+                <span class="eyebrow" style="color:#bcd6fb">Contact</span>
+                <h2 class="section-title text-white mb-3">Looking for a business growth or operations leader?</h2>
+                <p class="mb-0">
+                  Connect to discuss business development, city operations, supply chain,
+                  commercial management and client-facing leadership.
+                </p>
+              </div>
+
+              <div class="col-12 col-xl-4">
+                <div class="contact-actions d-grid d-sm-flex d-xl-grid gap-2 justify-content-sm-start">
+                  <a class="btn btn-light d-flex flex-row fw-bold rounded-3" href="https://mail.google.com/mail/?view=cm&fs=1&to=ramsrikantkumar@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-envelope me-2"></i>ramsrikantkumar@gmail.com
+                  </a>
+                  <a class="btn btn-outline-light fw-bold rounded-3" href="tel:+918420500841">
+                    <i class="bi bi-telephone me-2"></i>+91 84205 00841
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pb-4">
+      <div class="container-fluid px-3 px-sm-4 px-xl-5">
+        <div class="d-flex flex-column flex-md-row justify-content-between gap-2 text-secondary small">
+          <span>© <span id="year"></span> Srikant Kumar Ram</span>
+          <span>Business Development • Operations • Supply Chain</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const sections = [...document.querySelectorAll('main section[id]')];
+    const navItems = [...document.querySelectorAll('#desktopNav a[href^="#"], #mobileNav a[href^="#"]')];
+
+    function setActiveNav(){
+      const marker = window.scrollY + 180;
+      let current = 'home';
+
+      sections.forEach(section => {
+        if (section.offsetTop <= marker) current = section.id;
+      });
+
+      navItems.forEach(item => {
+        item.classList.toggle('active', item.getAttribute('href') === `#${current}`);
+      });
+    }
+
+    setActiveNav();
+    window.addEventListener('scroll', setActiveNav, {passive:true});
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!reduceMotion && 'IntersectionObserver' in window){
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting){
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {threshold:.12});
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

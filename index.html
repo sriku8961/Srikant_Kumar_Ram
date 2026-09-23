@@ -312,7 +312,7 @@
       content:"";
       position:absolute;
       left:10px;
-      top:12px;
+      top:27px;
       bottom:10px;
       width:1px;
       background:#cbd7e7;
@@ -327,7 +327,7 @@
       content:"";
       position:absolute;
       left:2px;
-      top:.4rem;
+      top:1.8rem;
       width:17px;
       height:17px;
       border-radius:50%;
@@ -492,6 +492,104 @@
   --bs-text-opacity: 1;
     color: rgb(208 208 208) !important;
 }
+ /* Clients Logo Marquee */
+    .client-marquee{
+      position:relative;
+      overflow:hidden;
+      /* border:1px solid var(--line);
+      border-radius:1.5rem;
+      background:rgba(255,255,255,.92);
+      box-shadow:0 12px 30px rgba(13,27,42,.05); */
+      padding:1.15rem 0;
+    }
+    .client-marquee::before,
+    .client-marquee::after{
+      content:"";
+      position:absolute;
+      top:0; bottom:0;
+      width:90px;
+      z-index:2;
+      pointer-events:none;
+    }
+    .client-marquee::before{
+      left:0;
+      background:linear-gradient(90deg,#fff 15%,rgba(255,255,255,0));
+    }
+    .client-marquee::after{
+      right:0;
+      background:linear-gradient(270deg,#fff 15%,rgba(255,255,255,0));
+    }
+    .client-logo-track{
+      display:flex;
+      align-items:center;
+      gap:1rem;
+      width:max-content;
+      animation:clientLogoMarquee 26s linear infinite;
+      will-change:transform;
+    }
+    .client-marquee:hover .client-logo-track{animation-play-state:paused}
+    .client-logo-item{
+      flex:0 0 auto;
+      width:176px;
+      height:86px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:1rem 1.2rem;
+      background:#cbf2ff;
+      border:1px solid #e7edf5;
+      border-radius:1rem;
+      transition:.22s ease;
+    }
+    .client-logo-item:hover{
+      transform:translateY(-3px);
+      box-shadow:0 12px 28px rgba(13,27,42,.09);
+      border-color:#c8d9ef;
+    }
+    .client-logo-item img{
+      max-width:132px;
+      max-height:48px;
+      width:auto;
+      height:auto;
+      object-fit:contain;
+      /* filter:grayscale(100%); */
+      opacity:.72;
+      transition:.22s ease;
+    }
+    .client-logo-item:hover img{
+      filter:grayscale(0);
+      opacity:1;
+      transform:scale(1.04);
+    }
+    .client-logo-fallback{
+      display:none;
+      color:var(--ink);
+      font-size:.9rem;
+      font-weight:700;
+      text-align:center;
+      white-space:nowrap;
+    }
+    @keyframes clientLogoMarquee{
+      from{transform:translateX(0)}
+      to{transform:translateX(calc(-50% - .5rem))}
+    }
+    @media (max-width:767.98px){
+      .client-marquee{border-radius:1.2rem;padding:.9rem 0}
+      .client-marquee::before,.client-marquee::after{width:42px}
+      .client-logo-item{width:145px;height:76px;padding:.8rem 1rem}
+      .client-logo-item img{max-width:112px;max-height:42px}
+      .client-logo-track{animation-duration:22s}
+    }
+    @media (prefers-reduced-motion:reduce){
+      .client-logo-track{
+        animation:none!important;
+        width:auto;
+        flex-wrap:wrap;
+        justify-content:center;
+        padding:0 1rem;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -644,25 +742,25 @@
                 <div class="row g-3">
                   <div class="col-6">
                     <div class="metric-card">
-                      <strong>₹80L</strong>
+                      <strong>₹80L+</strong>
                       <span>Business / revenue handled</span>
                     </div>
                   </div>
                   <div class="col-6">
                     <div class="metric-card">
-                      <strong>12</strong>
+                      <strong>12+</strong>
                       <span>Clients acquired & onboarded</span>
                     </div>
                   </div>
                   <div class="col-6">
                     <div class="metric-card">
-                      <strong>15</strong>
+                      <strong>15+</strong>
                       <span>Team members led</span>
                     </div>
                   </div>
                   <div class="col-6">
                     <div class="metric-card">
-                      <strong>12%</strong>
+                      <strong>15%+</strong>
                       <span>Business growth contributed</span>
                     </div>
                   </div>
@@ -747,7 +845,103 @@
           </div>
         </div>
       </section>
+   <!-- CLIENTS ACQUIRED & ONBOARDED -->
+      <section class="section-pad-sm" id="clients">
+        <div class="container-fluid px-3 px-sm-4 px-xl-5">
+          <div class="row g-4 align-items-end mb-4 reveal">
+            <div class="col-12 col-lg-12">
+              <span class="eyebrow">Client Portfolio</span>
+              <h2 class="section-title mb-0">Clients acquired &amp; onboarded.</h2>
+            </div>
+           
+          </div>
 
+          <div class="client-marquee reveal" aria-label="Clients acquired and onboarded">
+            <div class="client-logo-track">
+              <div class="client-logo-item" title="Emami">
+                <img src="emami.png" alt="Emami logo" loading="lazy"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                <span class="client-logo-fallback">Emami</span>
+              </div>
+              <div class="client-logo-item" title="Amrutanjan">
+                <img src="amrutanjan.png" alt="Amrutanjan logo" loading="lazy"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                <span class="client-logo-fallback">Amrutanjan</span>
+              </div>
+              <div class="client-logo-item" title="Lotte">
+                <img src="lotte.png" alt="Lotte logo" loading="lazy"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                <span class="client-logo-fallback">Lotte</span>
+              </div>
+              <div class="client-logo-item" title="Bajaj">
+                <img src="bajaj.png" alt="Bajaj logo" loading="lazy"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                <span class="client-logo-fallback">Bajaj</span>
+              </div>
+              <div class="client-logo-item" title="Abbott">
+                <img src="abbott.png" alt="Abbott logo" loading="lazy"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                <span class="client-logo-fallback">Abbott</span>
+              </div>
+              <div class="client-logo-item" title="Kimberly-Clark">
+                <img src="kc.png" alt="Kimberly-Clark logo" loading="lazy"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                <span class="client-logo-fallback">Kimberly-Clark</span>
+              </div>
+              <div class="client-logo-item" title="JL Morison">
+                <img src="jl-morison.png" alt="JL Morison logo" loading="lazy"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                <span class="client-logo-fallback">JL Morison</span>
+              </div>
+              <div class="client-logo-item" title="Niine">
+                <img src="niine.png" alt="Niine logo" loading="lazy"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                <span class="client-logo-fallback">Niine</span>
+              </div>
+              <div class="client-logo-item" aria-hidden="true" title="Emami">
+                <img src="emami.png" alt="" loading="lazy"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                <span class="client-logo-fallback">Emami</span>
+              </div>
+              <div class="client-logo-item" aria-hidden="true" title="Amrutanjan">
+                <img src="amrutanjan.png" alt="" loading="lazy"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                <span class="client-logo-fallback">Amrutanjan</span>
+              </div>
+              <div class="client-logo-item" aria-hidden="true" title="Lotte">
+                <img src="lotte.png" alt="" loading="lazy"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                <span class="client-logo-fallback">Lotte</span>
+              </div>
+              <div class="client-logo-item" aria-hidden="true" title="Bajaj">
+                <img src="bajaj.png" alt="" loading="lazy"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                <span class="client-logo-fallback">Bajaj</span>
+              </div>
+              <div class="client-logo-item" aria-hidden="true" title="Abbott">
+                <img src="abbott.png" alt="" loading="lazy"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                <span class="client-logo-fallback">Abbott</span>
+              </div>
+              <div class="client-logo-item" aria-hidden="true" title="Kimberly-Clark">
+                <img src="kc.png" alt="" loading="lazy"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                <span class="client-logo-fallback">Kimberly-Clark</span>
+              </div>
+              <div class="client-logo-item" aria-hidden="true" title="JL Morison">
+                <img src="jl-morison.png" alt="" loading="lazy"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                <span class="client-logo-fallback">JL Morison</span>
+              </div>
+              <div class="client-logo-item" aria-hidden="true" title="Niine">
+                <img src="niine.png" alt="" loading="lazy"
+                     onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                <span class="client-logo-fallback">Niine</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- EXPERIENCE -->
       <section class="section-pad" id="experience">
         <div class="container-fluid px-3 px-sm-4 px-xl-5">
@@ -773,8 +967,8 @@
                   <ul>
                     <li>Drive business development and client acquisition while supporting city-level commercial and operational execution.</li>
                     <li>Manage business operations and commercial activities representing approximately ₹80 lakh in revenue.</li>
-                    <li>Acquired and onboarded 12 clients through prospecting, relationship building, commercial discussions and conversion.</li>
-                    <li>Contributed to approximately 12% business growth through new client acquisition, account development and expansion initiatives.</li>
+                    <li>Acquired and onboarded 12+ clients through prospecting, relationship building, commercial discussions and conversion.</li>
+                    <li>Contributed to approximately 12%+ business growth through new client acquisition, account development and expansion initiatives.</li>
                     <li>Lead and coordinate a 15-member team across performance, staff development and day-to-day operational execution.</li>
                     <li>Prepare and negotiate proposals, rate cards and revised pricing while balancing client requirements with business margins.</li>
                     <li>Coordinate with operations and supply chain teams across onboarding, service delivery, issue resolution and process improvement.</li>
